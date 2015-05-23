@@ -5,12 +5,12 @@
         <form class="js-edit-form list-edit-form">
           <input type="text" name="name" value="{{name}}">
           <div class="nav-group right">
-            <a href="#" class="js-cancel nav-item"><span class="icon-close js-cancel" title="Cancel"></span></a>
+            <a href="#" class="js-cancel nav-item"><span class="icon-close js-cancel" title="Anuluj"></span></a>
           </div>
         </form>
       {{else}}
         <div class="nav-group">
-          <a href="#" class="js-menu nav-item"><span class="icon-list-unordered" title="Show menu"></span></a>
+          <a href="#" class="js-menu nav-item"><span class="icon-list-unordered" title="Pokaż menu"></span></a>
         </div>
 
         <h1 class="js-edit-list title-page"><span class="title-wrapper">{{name}}</span> <span class="count-list">{{incompleteCount}}</span></h1>
@@ -18,34 +18,34 @@
         <div class="nav-group right">
           <div class="nav-item options-mobile">
             <select class="list-edit">
-              <option disabled selected>Select an action</option>
+              <option disabled selected>Wybierz operacje</option>
               {{#if userId}}
-                <option value="public">Make Public</option>
+                <option value="public">Publiczny</option>
               {{else}}
-                <option value="private">Make Private</option>
+                <option value="private">Prywatny</option>
               {{/if}}
-              <option value="delete">Delete</option>
+              <option value="delete">Usuń</option>
             </select>
             <span class="icon-cog"></span>
           </div>
           <div class="options-web">
             <a class="js-toggle-list-privacy nav-item">
               {{#if userId}}
-                <span class="icon-lock" title="Make list public"></span>
+                <span class="icon-lock" title="Zmień na publiczną"></span>
               {{else}}
-                <span class="icon-unlock" title="Make list private"></span>
+                <span class="icon-unlock" title="Zmień na prywatną"></span>
               {{/if}}
             </a>
 
             <a class="js-delete-list nav-item">
-              <span class="icon-trash" title="Delete list"></span>
+              <span class="icon-trash" title="Usuń listę"></span>
             </a>
           </div>
         </div>
       {{/if}}
 
       <form class="js-todo-new todo-new input-symbol">
-        <input type="text" placeholder="Type to add new tasks">
+        <input type="text" placeholder="Napisz by dodać nowe zadanie">
         <span class="icon-add js-todo-add"></span>
       </form>
     </nav>
@@ -60,14 +60,14 @@
             {{> todosItem}}
           {{else}}
             <div class="wrapper-message">
-              <div class="title-message">No tasks here</div>
-              <div class="subtitle-message">Add new tasks using the field above</div>
+              <div class="title-message">Brak zadań</div>
+              <div class="subtitle-message">Dodaj zadanie używając powyższego pola</div>
             </div>
           {{/each}}
         {{/with}}
       {{else}}
           <div class="wrapper-message">
-            <div class="title-message">Loading tasks...</div>
+            <div class="title-message">Wczytuję zadania ...</div>
           </div>
       {{/if}}
     </div>

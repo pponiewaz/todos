@@ -8,8 +8,8 @@
 
     <div class="content-scrollable">
       <div class="wrapper-auth">
-        <h1 class="title-auth">Sign In.</h1>
-        <p class="subtitle-auth" >Signing in allows you to view private lists</p>
+        <h1 class="title-auth">Zaloguj się.</h1>
+        <p class="subtitle-auth" >Logując się masz dostęp do prywatnych list</p>
 
         <form>
           {{#if errorMessages}}
@@ -21,20 +21,20 @@
           {{/if}}
 
           <div class="input-symbol {{errorClass 'email'}}">
-            <input type="email" name="email" placeholder="Your Email" />
+            <input type="email" name="email" placeholder="Twój email" />
             <span class="icon-email" title="Your Email"></span>
           </div>
 
           <div class="input-symbol {{errorClass 'password'}}">
-            <input type="password" name="password" placeholder="Password" />
+            <input type="password" name="password" placeholder="Hasło" />
             <span class="icon-lock" title="Password"></span>
           </div>
 
-          <button type="submit" class="btn-primary">Sign in</button>
+          <button type="submit" class="btn-primary">Zarejestruj się</button>
         </form>
       </div>
 
-      <a href="{{pathFor 'join'}}" class="link-auth-alt">Need an account? Join Now.</a>
+      <a href="{{pathFor 'join'}}" class="link-auth-alt">Nie masz konta? Dołącz teraz.</a>
     </div>
   </div>
 </template>

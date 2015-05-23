@@ -23,11 +23,11 @@ Template.signin.events({
     var errors = {};
 
     if (! email) {
-      errors.email = 'Email is required';
+      errors.email = 'Email jest wymagany';
     }
 
     if (! password) {
-      errors.password = 'Password is required';
+      errors.password = 'Hasło jest wymagane';
     }
     
     Session.set(ERRORS_KEY, errors);
